@@ -8,13 +8,13 @@ class View
 	public function render($path=Null, $args=Null)
 	{
 		if ($path) {
-			if (file_exists(TEMPLATES_DIR . $_SERVER['TEMPLATE_DIR'] . $path . ".php")) {
+			if (file_exists(TEMPLATES_DIR . "templates/" . $path . ".php")) {
 				if ($args) {
 					foreach ($args as $key => $value) {
 						$$key = $value;
 					}
 				}
-				include(TEMPLATES_DIR . $_SERVER['TEMPLATE_DIR'] . $path . ".php");	
+				include(TEMPLATES_DIR . "templates/" . $path . ".php");	
 			}else{
 				die("No existe el Archivo {$path}.php");
 			}	

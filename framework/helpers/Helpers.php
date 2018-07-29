@@ -1,6 +1,5 @@
 <?php 
 define('URL_DIR', $_SERVER['HTTP_HOST'] . "/". explode("/", $_SERVER['PHP_SELF'])[1] . "/");
-define('SECRET_KEY', $_SERVER['SECRET_KEY']);
 
 function sessionStatus() {
 	return (function_exists("session_status")) ? session_status() : session_id();
